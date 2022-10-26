@@ -1,0 +1,60 @@
+﻿@model Web.Areas.Shared.ViewModels.ImportCSVViewModel
+
+<div class="modal fade" id="dv-modal-import">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">@Model.Title </h4>
+            </div><br />
+            <div class="col-lg-12">
+                <div id="fileupload-container">
+                    <!-- The global progress bar -->
+                    <div class="col-lg-8">
+                        <div id="progress" class="progress">
+                            <div class="progress-bar progress-bar-success"></div>
+                        </div>
+                    </div>
+                    <span class="btn btn-primary fileinput-button col-lg-3 pull-right">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Import file..</span>
+                        <!-- The file input field used as target for the file upload widget -->
+                        <input id="fileupload" type="file" name="files">
+                    </span>
+                </div>
+                <br /><br />
+                <div>
+                    <p>
+                        To get started, please download the <a href="@Model.CSVSampleURL"> sample spreadsheet </a> of the delivery receipts.
+                        You'll be able to open it in any spreadsheet application, such as <strong>Microsoft's Excel</strong> or <strong>Apple's Numbers</strong>.
+                    </p>
+                    <p>
+                        Once you've made the desired changes to the file, click 'Import file...' and you'll be able to upload the
+                        modified spreadsheet.
+                    </p>
+                    <p id="lbl-import-message"></p> &nbsp;
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn non-box btn-default" id="btn-import-cancel" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn non-box btn-primary" id="btn-import-ok" data-dismiss="modal">OK</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<link href="~/Content/css/jquery/jquery.fileupload.css" rel="stylesheet" />
+<link href="~/Content/css/jquery/jquery-ui.css" rel="stylesheet" />
+<link href="~/Content/css/application/import-csv.css" rel="stylesheet" />
+<script src="~/Content/js/import-csv/jquery.ui.widget.js"></script>
+<script src="~/Content/js/import-csv/jquery.iframe-transport.js"></script>
+<script src="~/Content/js/import-csv/jquery.fileupload.js"></script>
+<script src="~/Content/js/import-csv/main.js"></script>
+
+
+<button id="dv-import-products"    
+                                class  =    "btn box btn-default fa fa-upload import @Model.CSSClass"
+                    data-url-endpoint  =    "@Model.URLEndPoint"
+                          data-tooltip  =    "tooltip"
+                                title  =     "Import CSV">
+    
+</button>

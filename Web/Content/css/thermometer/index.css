@@ -1,0 +1,52 @@
+﻿body {
+    margin: 0;
+    font-family: arial;
+    font-size: 11px;
+    overflow-x: hidden;
+}
+
+.center {
+    text-align: center;
+}
+
+.padded-5 {
+    padding: 5px 5px 5px 5px;
+}
+
+.dv-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.dv-wrapper {
+    width: 20vw;
+    height: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.dv-settings-container {
+    font-size: 14px;
+    background-color: #ecebeb;
+    margin-bottom: 20px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.dv-settings-container table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dv-settings-container label {
+    font-weight: bold;
+}
+
+.dv-settings-container input {
+    text-align: right;
+    padding: 5px 5px 5px 5px;
+}
+.dv-settings-container button {
+    padding: 5px 5px 5px 5px;
+}

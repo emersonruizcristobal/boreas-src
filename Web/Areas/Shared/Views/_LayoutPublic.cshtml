@@ -1,0 +1,22 @@
+﻿@{
+    var settingService = new Service.Setting.SettingService();
+    var version = "1.0";
+    try {
+        version = typeof(Web.MvcApplication).Assembly.GetName().Version.ToString();
+    } catch (Exception exception) {
+
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title></title>
+</head>
+
+<body>
+    @RenderBody()
+</body>
+</html>
+

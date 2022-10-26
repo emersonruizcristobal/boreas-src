@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Shared/Views/_Layout.cshtml";
+}
+
+@section Scripts{
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="~/Content/js/boreas/boreas.js"></script>
+    <script src="~/Content/js/thermometer/index.js"></script>
+}
+
+@section Styles{
+    <link href="~/Content/css/thermometer/index.css" rel="stylesheet" />
+    <link href="~/Content/css/boreas/boreas.css" rel="stylesheet">
+}
+
+<div class="dv-container">
+    <div class="dv-settings-container">
+        <h2>Add Thermometer</h2>
+        <table>
+            <tr>
+                <td>
+                    <label>Floor</label>
+                </td>
+                <td>
+                    <input type="text" id="fld-floor" value="-30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Ceiling</label>
+                </td>
+                <td>
+                    <input type="text" id="fld-ceiling" value="200" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Step</label>
+                </td>
+                <td>
+                    <input type="text" id="fld-step" value="10" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="center padded-5">
+                    <button class="btn-add">Add</button>
+                </td>
+            </tr>
+        </table> 
+        <br class="break" />
+    </div>
+    <div class="dv-wrapper">
+        <div id="t1" class="dv-thermometer"></div>
+    </div>
+</div>

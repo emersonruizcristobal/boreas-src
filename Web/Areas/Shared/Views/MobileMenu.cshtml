@@ -1,0 +1,43 @@
+﻿@using Service.RoleTemplate;
+@using Service.Persistence
+@using Domain.Enums;
+
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dv-menu-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="dv-menu-toggle">
+            <ul class="nav navbar-nav">
+                <li class="@Html.GetPermission(ApplicationElement.MenuWorkstation)">
+                    <a href="#" id="lnk-workstation" data-toggle="collapse" data-target="#workstation">WORKSTATION</a>
+                    <ul class="nav collapse" id="workstation" role="menu" aria-labelledby="lnk-workstation">
+                        <li><a class="lnk-mobile" href="/workstation/main?dif=efg#cle"> - Permits</a></li>
+                    </ul>
+                </li>
+                <li class="@Html.GetPermission(ApplicationElement.MenuDashboard)">
+                    <a href="#" id="lnk-dashboard" data-toggle="collapse" data-target="#dashboard">DASHBOARD</a>
+                    <ul class="nav collapse" id="dashboard" role="menu" aria-labelledby="lnk-dashboard">
+                        <li><a class="lnk-mobile" href="/dashboard/main"> - Summary</a></li>
+                    </ul>
+                </li>
+                <li class="@Html.GetPermission(ApplicationElement.MenuResidentsData)">
+                    <a href="#" id="lnk-constituents" data-toggle="collapse" data-target="#constituents">CONSTITUENTS</a>
+                    <ul class="nav collapse" id="constituents" role="menu" aria-labelledby="lnk-constituents">
+                        <li><a class="lnk-mobile" href="/constituents/main?dif=res#res"> - Residents</a></li>
+                        <li><a class="lnk-mobile" href="/constituents/main?dif=bus#bus"> - Businesses</a></li>
+                    </ul>
+                </li>
+                <li><a href="/account/logout">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

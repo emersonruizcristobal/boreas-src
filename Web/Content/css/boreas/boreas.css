@@ -1,0 +1,90 @@
+﻿.dv-thermometer {
+    border-bottom: solid 1px #ecebeb;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.dv-celsius {
+    float: left;
+    width: 40%;
+}
+
+.dv-main {
+    float: left;
+    width: 20%;
+    background: rgb(0,52,255);
+    background: linear-gradient(0deg, rgba(0,52,255,1) 0%, rgba(9,9,121,1) 50%, rgba(255,0,0,1) 100%);
+    outline: 5px solid #fff;
+    outline-offset: -4px;
+}
+
+.dv-farenheit {
+    float: left;
+    width: 40%;
+}
+
+.dv-temp-control {
+    height: 15px;
+    width: 100%;
+    background-color: grey;
+    cursor: pointer;
+}
+
+.dv-box {
+    height: 10px;
+    width: 100%;
+    clear: both;
+    border-bottom: solid 1px #fff;
+    padding: 2px 0px 2px 0px;
+}
+
+.dv-clear {
+    height: 11px;
+    width: 100%;
+    clear: both;
+    padding: 2px 0px 2px 0px;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.dv-celsius .dv-box {
+    text-align: right;
+}
+
+.dv-input {
+    padding-bottom: 50px;
+}
+
+    .dv-input br {
+        clear: both;
+    }
+
+    .dv-input label {
+        float: left;
+        margin-top: 5px;
+    }
+
+    .dv-input input {
+        float: right;
+        margin-top: 5px;
+        text-align: right;
+    }
+
+.clear {
+    clear: both;
+}
+
+.btn-delete {
+    float:right;
+}
